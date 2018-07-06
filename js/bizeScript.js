@@ -98,11 +98,11 @@ $(function () {
 
 /*menu in aside*/
 $(document).ready(function() {
-    $('.mainAsideUp__li').mouseenter(function () {
+    $('.mainAsideUp__li',this).mouseenter(function () {
         $('.mainAsideUp__ulInner',this).slideDown(500);
         $('.mainAsideUp__link',this).addClass('mainAsideUp__link--active').fadeIn(500);
     });
-    $('.mainAsideUp__li').mouseleave(function () {
+    $('.mainAsideUp__li',this).mouseleave(function () {
         $('.mainAsideUp__ulInner',this).slideUp(500);
         $('.mainAsideUp__link',this).removeClass('mainAsideUp__link--active').fadeIn(500);
     });
