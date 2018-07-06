@@ -98,7 +98,7 @@ $(function () {
 
 /*menu in aside*/
 $(document).ready(function() {
-    $('.mainAsideUp__li',this).mouseenter(function () {
+    $('.mainAsideUp__li',this).click(function () {
         $('.mainAsideUp__ulInner',this).slideDown(500);
         $('.mainAsideUp__link',this).addClass('mainAsideUp__link--active').fadeIn(500);
     });
