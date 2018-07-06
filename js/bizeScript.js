@@ -65,34 +65,47 @@ $(function () {
 });
 
 
+/*menu in aside*/
+// window.addEventListener('load', function () {
+//     var menuItem = document.querySelectorAll('.mainAsideUp__li');
+//
+//     for (var i = 0; i<menuItem.length; i++){
+//         menuItem[i].addEventListener('mouseenter', showSubMenu, false);
+//         menuItem[i].addEventListener('mouseleave', hideSubMenu, false);
+//     }
+//
+//     function showSubMenu() {
+//         if(this.children.length>1){
+//             this.children[1].style.height = 'auto';
+//             this.children[1].style.opacity = '1';
+//             this.children[1].style.overflow = 'visible';
+//         } else {
+//             return false;
+//         }
+//     }
+//
+//     function hideSubMenu() {
+//         if(this.children.length>1){
+//             this.children[1].style.height = '0';
+//             this.children[1].style.opacity = '0';
+//             this.children[1].style.overflow = 'hidden';
+//         } else {
+//             return false;
+//         }
+//     }
+// });
 
 
 /*menu in aside*/
-window.addEventListener('load', function () {
-    var menuItem = document.querySelectorAll('.mainAsideUp__li');
-
-    for (var i = 0; i<menuItem.length; i++){
-        menuItem[i].addEventListener('mouseenter', showSubMenu, false);
-        menuItem[i].addEventListener('mouseleave', hideSubMenu, false);
-    }
-
-    function showSubMenu() {
-        if(this.children.length>1){
-            this.children[1].style.height = 'auto';
-            this.children[1].style.opacity = '1';
-            this.children[1].style.overflow = 'visible';
-        } else {
-            return false;
-        }
-    }
-
-    function hideSubMenu() {
-        if(this.children.length>1){
-            this.children[1].style.height = '0';
-            this.children[1].style.opacity = '0';
-            this.children[1].style.overflow = 'hidden';
-        } else {
-            return false;
-        }
-    }
+$(document).ready(function() {
+    $('.mainAsideUp__li').mouseenter(function () {
+        $('.mainAsideUp__ulInner',this).slideDown(500);
+        $('.mainAsideUp__link',this).addClass('mainAsideUp__link--active').fadeIn(500);
+    });
+    $('.mainAsideUp__li').mouseleave(function () {
+        $('.mainAsideUp__ulInner',this).slideUp(500);
+        $('.mainAsideUp__link',this).removeClass('mainAsideUp__link--active').fadeIn(500);
+    });
 });
+
+
