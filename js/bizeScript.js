@@ -56,13 +56,15 @@ $(document).ready(function() {
 
 
 /*Переключение между вкладками*/
-$(function () {
+$(document).ready(function() {
     $('.mainDreesMenu a').click(function () {
         $(this).addClass('mainDreesMenu--active').siblings().removeClass('mainDreesMenu--active');
         $('.mainDreesBlock').hide().eq($(this).index()).fadeIn(1500).show();
         return false;
     });
 });
+
+
 
 
 /*menu in aside*/
@@ -100,11 +102,11 @@ $(function () {
 $(document).ready(function() {
     $('.mainAsideUp__li',this).click(function () {
         $('.mainAsideUp__ulInner',this).slideDown(500);
-        $('.mainAsideUp__link',this).addClass('mainAsideUp__link--active').fadeIn(500);
+        $('.mainAsideUp__link',this).addClass('mainAsideUp__link--active');
     });
     $('.mainAsideUp__li',this).mouseleave(function () {
         $('.mainAsideUp__ulInner',this).slideUp(500);
-        $('.mainAsideUp__link',this).removeClass('mainAsideUp__link--active').fadeIn(500);
+        $('.mainAsideUp__link',this).removeClass('mainAsideUp__link--active');
     });
 });
 
