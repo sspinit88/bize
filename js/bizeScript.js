@@ -111,3 +111,14 @@ $(document).ready(function() {
 });
 
 
+/**/
+$(document).ready(function() {
+    $('.pis').click(function(){
+        var ahref=$(this).find('.pis__link');
+        $('.productionInSlide__img').attr('src', ahref[0].src);
+        $('.pis').removeClass('pis--active');
+        $(this).addClass('pis--active');
+        return false;
+    })
+});
+
